@@ -95,7 +95,7 @@ model Review {
   text       String?
   // Audio URL
   audio      String?
-  socialLink String
+  socialLink String?
   socialType SocialType?
 
   // Image and name getting from social

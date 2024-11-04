@@ -1,26 +1,26 @@
-import { auth } from "@/auth/auth"
+
 import { SignInButton } from "./SignInButton"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { LoggedInDropdown } from "./LoggedInDropdown"
+import { currentUser } from "@/auth/current-user"
 
 export const LoggedInButton = async () => {
-    const session = await auth()
+    const user = await currentUser();
 
-    if (!session?.user) {
-        return <SignInButton />
-    }
-
+    if (!user) {
+        return <SignInButton />;
+      }
 
     return (
        <LoggedInDropdown>
             <Button variant="outline" size="sm">
                 <Avatar className="size-6">
-                    <AvatarFallback>{session.user.name?.[0]}</AvatarFallback>
-                    {session.user.image ? (
+                    <AvatarFallback>{user.name?.[0]}</AvatarFallback>
+                    {user.image ? (
                         <AvatarImage
-                            src={session.user.image} 
-                            alt={`${session.user.name ?? "-"}'s profile picture`}
+                            src={user.image} 
+                            alt={`${user.name ?? "-"}'s profile picture`}
                         />
                     ) : null}
                 </Avatar>

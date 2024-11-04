@@ -1,4 +1,4 @@
-/* import { User } from "@prisma/client";
+import { User } from "@prisma/client";
 import { baseAuth } from "./auth";
 
 export const currentUser = async () => {
@@ -21,4 +21,4 @@ export const requiredCurrentUser = async () => {
   }
 
   return user;
-}; */
+};

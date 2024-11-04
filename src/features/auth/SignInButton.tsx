@@ -1,21 +1,20 @@
-import { signIn } from "@/auth/auth"
-import { Button } from "@/components/ui/button"
-import { LogIn } from "lucide-react";
+"use client";
 
-export const SignInButton = () => { 
-    return (
-        <form>
-            <Button
-                variant="secondary"
-                size="sm"
-                formAction={async () => {
-                    "use server";
-                    await signIn();            
-                }}
-            >
-                <LogIn size={16} className="mr-2" />
-                Sign In
-            </Button>
-        </form>
-    );
+import { Button } from "@/components/ui/button";
+import { LogIn } from "lucide-react";
+import { signInAction } from "./auth.action";
+
+export const SignInButton = () => {
+  return (
+    <Button
+      variant="secondary"
+      size="sm"
+      onClick={() => {
+        signInAction();
+      }}
+    >
+      <LogIn size={16} className="mr-2" />
+      Sign In
+    </Button>
+  );
 };

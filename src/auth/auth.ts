@@ -6,12 +6,20 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient();
  
-export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
-  theme: {
-    logo: '/icon-title.png'
-  },
-  providers: [
-    Google({ clientId: env.GOOGLE_CLIENT_ID, clientSecret: env.GOOGLE_CLIENT_SECRET }),
-  ],
+export const { 
+    handlers,
+    auth: baseAuth,
+    signIn,
+    signOut 
+  } = NextAuth({
+    adapter: PrismaAdapter(prisma),
+    theme: {
+      logo: '/icon-title.png'
+    },
+    providers: [
+      Google({
+        clientId: env.GOOGLE_CLIENT_ID,
+        clientSecret: env.GOOGLE_CLIENT_SECRET 
+      }),
+    ],
 })
