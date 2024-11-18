@@ -51,7 +51,6 @@ model User {
   email            String?   @unique
   emailVerified    DateTime?
   image            String?
-  plan             Plan      @default(FREE)
   stripeCustomerId String?
 
   accounts Account[]

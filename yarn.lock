@@ -4115,10 +4115,10 @@ next-auth@^5.0.0-beta.22:
   dependencies:
     "@auth/core" "0.35.3"
 
-next-safe-action@7.4.3:
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/next-safe-action/-/next-safe-action-7.4.3.tgz#dc745ce87b844750ca871ffad20bf379e93ab0d2"
-  integrity sha512-wUVs5Leh6GWR4vnQuSdJDIJFAuz9YWuCYo7S4px1bofu+Pfg9Em/1zZxZvwaFmIqu+TJssOM5rsq64Og2owagQ==
+next-safe-action@^7.9.9:
+  version "7.9.9"
+  resolved "https://registry.yarnpkg.com/next-safe-action/-/next-safe-action-7.9.9.tgz#dbf048f5c75662f43db2d568a0c1412cd83f2f50"
+  integrity sha512-wFKKCgfHNsObfbDrbOQV8WAE6RnVx7dwmuUazqdNaTL3ZdDzUlRTnIIVI36qSjmgA3zwwxj3nvfxgK9d0fWr5w==
 
 next-themes@^0.3.0:
   version "0.3.0"

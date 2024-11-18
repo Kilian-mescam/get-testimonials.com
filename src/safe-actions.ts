@@ -34,11 +34,11 @@ const handleReturnedServerError = (error: Error) => {
 };
 
 export const action = createSafeActionClient({
-  handleReturnedServerError: handleReturnedServerError,
+  handleServerError: handleReturnedServerError,
 });
 
 export const userAction = createSafeActionClient({
-  handleReturnedServerError(e) {
+  handleServerError(e) {
     if (e instanceof ActionError) {
       return {
         serverError: e.message
